@@ -5,9 +5,10 @@ app = Flask(__name__)
 
 @app.route("/")
 def url_root():
-    return "OK"
-
-
+    data = { 
+        "message":"OK"
+    }
+    return jsonify(data)
 
 @app.route("/bitacora/n1/<int:n1>/n2/<int:n2>/op/<op>", methods=["GET"])
 def writeBitacora(n1,n2,op):
