@@ -87,7 +87,7 @@ metadata:
   namespace: uspg
 spec:
   rules:
-    - host: 35.202.75.217.nip.io
+    - host: YOUR_INGRESS_CONTROLLER_IP.nip.io
       http:
         paths:
           - backend:
