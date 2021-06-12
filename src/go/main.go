@@ -28,7 +28,7 @@ type Response struct {
 
 func write2Redis(n1 string, n2 string) {
 	rdb := redis.NewClient(&redis.Options{
-		Addr:     "localhost:6379",
+		Addr:     "redis:6379",
 		Password: "", // no password set
 		DB:       0,  // use default DB
 	})
@@ -46,7 +46,7 @@ func write2Redis(n1 string, n2 string) {
 
 func calculate() int {
 	rdb := redis.NewClient(&redis.Options{
-		Addr:     "localhost:6379",
+		Addr:     "redis:6379",
 		Password: "", // no password set
 		DB:       0,  // use default DB
 	})
